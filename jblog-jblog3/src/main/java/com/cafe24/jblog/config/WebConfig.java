@@ -15,8 +15,7 @@ import com.cafe24.config.web.SecurityConfig;
 @EnableWebMvc
 @EnableAspectJAutoProxy
 @ComponentScan(basePackages={"com.cafe24.jblog.controller, com.cafe24.jblog.cotroller.api, com.cafe24.jblog.exception"})
-@Import({MVCConfig.class, SecurityConfig.class, MessageConfig.class})//FileuploadConfig.class
+@Import({MVCConfig.class, SecurityConfig.class, MessageConfig.class,FileuploadConfig.class})//FileuploadConfig.class
 public class WebConfig {
-	
 	
 }

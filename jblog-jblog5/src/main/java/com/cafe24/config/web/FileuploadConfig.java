@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -17,7 +18,7 @@ public class FileuploadConfig extends WebMvcConfigurerAdapter {
 	private Environment env;
 	
 	@Bean
-	public CommonsMultipartResolver commonMultipartResolver() {
+	public MultipartResolver multipartResolver() {
 		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
 		multipartResolver.setMaxUploadSize(env.getProperty("maxUploadSize",Long.class));
 		multipartResolver.setMaxInMemorySize(env.getProperty("maxInMemorySize",Integer.class));

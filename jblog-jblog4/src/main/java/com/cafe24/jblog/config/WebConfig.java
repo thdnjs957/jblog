@@ -18,7 +18,7 @@ import com.cafe24.config.web.MessageConfig;
 @EnableWebMvc//mvc 붙어있는애들 한번에 
 @EnableAspectJAutoProxy
 @ComponentScan({"com.cafe24.jblog.controller"}) //이건 자동 설정
-@Import({MVCConfig.class, SecurityConfig.class,MessageConfig.class}) //여기에 추가 ,FileuploadConfig.class 이건 왜 안됨;;;;
+@Import({MVCConfig.class, SecurityConfig.class,MessageConfig.class,FileuploadConfig.class}) //여기에 추가 ,FileuploadConfig.class 이건 왜 안됨;;;;
 public class WebConfig {
 	
 	@Bean 

@@ -71,8 +71,8 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-
-
+		
+		
 		<!-- Common DBCP -->
 		<dependency>
 			<groupId>commons-dbcp</groupId>
